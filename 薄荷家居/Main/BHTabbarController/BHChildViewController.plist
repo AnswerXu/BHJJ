@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BHChildViewControllers</key>
+	<array>
+		<dict>
+			<key>childViewController</key>
+			<string>BHHomeViewController</string>
+			<key>itemTitle</key>
+			<string>薄荷家居</string>
+			<key>itemImage</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>childViewController</key>
+			<string>BHProductViewController</string>
+			<key>itemTitle</key>
+			<string>单品</string>
+			<key>itemImage</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>childViewController</key>
+			<string>BHClassifyViewController</string>
+			<key>itemImage</key>
+			<string></string>
+			<key>itemTitle</key>
+			<string>分类</string>
+		</dict>
+		<dict>
+			<key>childViewController</key>
+			<string>BHMyselfViewController</string>
+			<key>itemImage</key>
+			<string></string>
+			<key>itemTitle</key>
+			<string>我</string>
+		</dict>
+	</array>
+</dict>
+</plist>

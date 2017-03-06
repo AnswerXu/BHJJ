@@ -1,0 +1,14 @@
+//
+//  BHPrefixHeader.pch
+//  薄荷家居
+//
+//  Created by 澳蜗科技 on 2017/3/6.
+//  Copyright © 2017年 AnswerXu. All rights reserved.
+//
+
+#ifndef BHPrefixHeader_pch
+#define BHPrefixHeader_pch
+
+#import "BHConst.h"
+
+#endif /* BHPrefixHeader_pch */
