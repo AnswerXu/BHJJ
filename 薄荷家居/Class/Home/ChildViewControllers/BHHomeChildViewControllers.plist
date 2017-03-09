@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>childViewController</key>
+		<string>BHCarefullySelectViewController</string>
+		<key>title</key>
+		<string>精选</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>卧室</string>
+		<key>childViewController</key>
+		<string>BHBedroomViewController</string>
+	</dict>
+	<dict>
+		<key>childViewController</key>
+		<string>BHStudyViewController</string>
+		<key>title</key>
+		<string>书房</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>卫浴</string>
+		<key>childViewController</key>
+		<string>BHBathroomViewController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>厨房</string>
+		<key>childViewController</key>
+		<string>BHKitchenViewController</string>
+	</dict>
+	<dict>
+		<key>childViewController</key>
+		<string>BHLivingroomViewController</string>
+		<key>title</key>
+		<string>客厅</string>
+	</dict>
+</array>
+</plist>
