@@ -7,15 +7,60 @@
 //
 
 #import "BHProductCollectionView.h"
+#import "BHProductCollectionViewCell.h"
+#import "BHProductModel.h"
 
+@interface BHProductCollectionView()<UICollectionViewDataSource>
+
+@end
+
+@interface BHProductCollectionViewFlowLayout : UICollectionViewFlowLayout
+@end
+static const CGFloat edgeSpacing  = 10;
+static const CGFloat lineSpacing  = 10;
+static const CGFloat interSpacing = 10;
+static const NSInteger itemColCount   = 2;
+@implementation BHProductCollectionViewFlowLayout
+-(void)prepareLayout{
+    CGFloat itemWidth = (BHScreenWidth - edgeSpacing * 2 - (itemColCount - 1) * interSpacing) / itemColCount;
+    CGFloat itemHeight = itemWidth / 2.f * 3;
+    self.itemSize = CGSizeMake(itemWidth, itemHeight);
+    self.minimumLineSpacing = lineSpacing;
+    self.minimumInteritemSpacing = interSpacing;
+}
+@end
+
+static NSString * const productCellIdent = @"productCellIdent";
 @implementation BHProductCollectionView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+#pragma mark-  初始化方法
+-(instancetype)init{
+    if (self = [super initWithFrame:CGRectMake(0, 0, BHScreenWidth, BHScreenHeiht - 49 - 64) collectionViewLayout:[[BHProductCollectionViewFlowLayout alloc] init]]) {
+        [self setupCollectionView];
+    }
+    return self;
 }
-*/
+
+-(void)setupCollectionView{
+    self.dataSource = self;
+    self.contentInset = UIEdgeInsetsMake(edgeSpacing/2, edgeSpacing, edgeSpacing, edgeSpacing/2);
+    self.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    [self registerClass:[BHProductCollectionViewCell class] forCellWithReuseIdentifier:productCellIdent];
+}
+
+-(void)setDatas:(NSArray<BHProductModel *> *)datas{
+    _datas = datas;
+    [self reloadData];
+}
+
+#pragma mark-  数据源方法
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return _datas.count;
+}
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    BHProductCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:productCellIdent forIndexPath:indexPath];
+    cell.productModel = _datas[indexPath.item];
+    return cell;
+}
 
 @end

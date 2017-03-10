@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BHCarefullySelectViewController : UIViewController
+#import "BHHomeBaseViewController.h"
+@interface BHCarefullySelectViewController : BHHomeBaseViewController
 
 @end

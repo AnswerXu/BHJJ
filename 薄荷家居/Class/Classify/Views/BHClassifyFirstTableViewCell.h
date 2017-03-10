@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class BHClassifyTopicModel;
 @interface BHClassifyFirstTableViewCell : UITableViewCell
-
+@property (nonatomic,copy) NSArray<BHClassifyTopicModel *> *topicModels;
 @end

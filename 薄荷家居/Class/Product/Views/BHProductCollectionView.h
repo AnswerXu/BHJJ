@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class BHProductModel;
 @interface BHProductCollectionView : UICollectionView
-
+@property (nonatomic,copy) NSArray<BHProductModel *> *datas;
 @end

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class BHClassifyItemModel;
 @interface BHClassifySecondCellCollectionView : UICollectionView
-
+@property (nonatomic,copy) NSArray<BHClassifyItemModel *> *itemModels;
 @end

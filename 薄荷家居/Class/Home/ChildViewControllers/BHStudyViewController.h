@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BHStudyViewController : UIViewController
+#import "BHHomeBaseViewController.h"
+@interface BHStudyViewController : BHHomeBaseViewController
 
 @end

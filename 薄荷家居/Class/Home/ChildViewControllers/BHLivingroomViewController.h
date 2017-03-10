@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BHLivingroomViewController : UIViewController
+#import "BHHomeBaseViewController.h"
+@interface BHLivingroomViewController : BHHomeBaseViewController
 
 @end

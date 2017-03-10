@@ -10,12 +10,15 @@
 
 @implementation BHRightImageButton
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    CGRect titleLabelTemp = self.titleLabel.frame;
+    titleLabelTemp.origin.x = 0;
+    self.titleLabel.frame = titleLabelTemp;
+    
+    CGRect imageViewTemp = self.imageView.frame;
+    imageViewTemp.origin.x = self.titleLabel.maxX + 5;
+    self.imageView.frame = imageViewTemp;
 }
-*/
 
 @end

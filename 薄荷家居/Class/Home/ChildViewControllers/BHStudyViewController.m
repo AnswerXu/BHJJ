@@ -16,22 +16,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)requestDatas{
+    NetworkHelper *helper = [NetworkHelper shareInstance];
+    NSDictionary *paramers = @{kOffset:@(self.offset),kLimit:@(20)};
+    [helper Get:kStudy parameter:paramers success:^(id obj) {
+        if (self.isDown) {
+            [self.dataSource removeAllObjects];
+        }
+        NSArray *items = obj[@"data"][@"items"];
+        for (NSDictionary *dict in items) {
+            BHHomeDataModel *model = [[BHHomeDataModel alloc] initWithDictionary:dict error:nil];
+            [self.dataSource addObject:model];
+        }
+        [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+    } failure:nil];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

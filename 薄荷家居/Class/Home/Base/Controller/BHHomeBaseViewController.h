@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BHHomeDataModel.h"
 
-@class BHHomeDataModel;
 @interface BHHomeBaseViewController : UIViewController
+@property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,copy) NSMutableArray<BHHomeDataModel *> *dataSource;
+@property (nonatomic,assign) BOOL isDown;
+@property (nonatomic,assign) NSInteger offset;
+-(void)requestDatas;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BHKitchenViewController : UIViewController
+#import "BHHomeBaseViewController.h"
+@interface BHKitchenViewController : BHHomeBaseViewController
 
 @end

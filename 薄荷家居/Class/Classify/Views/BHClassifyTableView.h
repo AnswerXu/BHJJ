@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class BHClassifyItemModel;
+@class BHClassifyTopicModel;
 @interface BHClassifyTableView : UITableView
-
 @end

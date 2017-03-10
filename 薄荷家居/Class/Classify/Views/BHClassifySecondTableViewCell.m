@@ -7,18 +7,40 @@
 //
 
 #import "BHClassifySecondTableViewCell.h"
+#import "BHClassifySecondCellCollectionView.h"
+
+@interface BHClassifySecondTableViewCell()
+@property (nonatomic,strong) BHClassifySecondCellCollectionView *collectionView;
+@end
 
 @implementation BHClassifySecondTableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+#pragma mark-  懒加载
+-(BHClassifySecondCellCollectionView *)collectionView{
+    if (!_collectionView) {
+        _collectionView = [[BHClassifySecondCellCollectionView alloc] init];
+    }
+    return _collectionView;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        [self.contentView addSubview:self.collectionView];
+        self.textLabel.font = [UIFont systemFontOfSize:15];
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    return self;
 }
 
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    self.textLabel.frame = CGRectMake(10, 0, self.width, BHClassifyHeaderViewHeight);
+    self.collectionView.frame = CGRectMake(0, self.textLabel.maxY, self.width, self.height - 10 - BHClassifyHeaderViewHeight);
+}
+
+-(void)setItemModels:(NSArray<BHClassifyItemModel *> *)itemModels{
+    _itemModels = itemModels;
+    self.collectionView.itemModels = itemModels;
+    [self.collectionView reloadData];
+}
 @end

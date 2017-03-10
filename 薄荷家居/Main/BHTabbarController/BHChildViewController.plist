@@ -10,7 +10,7 @@
 			<key>itemTitle</key>
 			<string>薄荷家居</string>
 			<key>itemImage</key>
-			<string></string>
+			<string>pfb_tabbar_homepage</string>
 		</dict>
 		<dict>
 			<key>childViewController</key>
@@ -18,13 +18,13 @@
 			<key>itemTitle</key>
 			<string>单品</string>
 			<key>itemImage</key>
-			<string></string>
+			<string>pfb_tabbar_order</string>
 		</dict>
 		<dict>
 			<key>childViewController</key>
 			<string>BHClassifyViewController</string>
 			<key>itemImage</key>
-			<string></string>
+			<string>pfb_tabbar_discover</string>
 			<key>itemTitle</key>
 			<string>分类</string>
 		</dict>
@@ -32,7 +32,7 @@
 			<key>childViewController</key>
 			<string>BHMyselfViewController</string>
 			<key>itemImage</key>
-			<string></string>
+			<string>pfb_tabbar_mine</string>
 			<key>itemTitle</key>
 			<string>我</string>
 		</dict>

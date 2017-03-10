@@ -10,5 +10,12 @@
 #define BHPrefixHeader_pch
 
 #import "BHConst.h"
+#import "UIView+Frame.h"
+#import "AFNetworking.h"
+#import "MJRefresh.h"
+#import "JSONModel.h"
+#import "UIImageView+WebCache.h"
+#import "NetworkHelper.h"
+#import "interface.h"
 
 #endif /* BHPrefixHeader_pch */

@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BHHomeMenuView : UIView
+@class BHMenuItem;
+@class BHHomeMenuView;
+@protocol MenuViewDelegate <NSObject>
+-(NSInteger)numberOfColumnsInMenuView:(BHHomeMenuView *)menuView;
+-(BHMenuItem *)menuView:(BHHomeMenuView *)menuView itemForColumnAtIndexPath:(NSIndexPath *)indexPath;
+@end
 
+@interface BHHomeMenuView : UIImageView
+@property (nonatomic,copy) NSMutableArray<BHMenuItem *> *items;
+@property (nonatomic,weak) id<MenuViewDelegate> delegate;
+-(void)scrollLineAnimationWithIndex:(NSInteger)index;
 @end

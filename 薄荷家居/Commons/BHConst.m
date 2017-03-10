@@ -8,3 +8,8 @@
 
 #import "BHConst.h"
 
+
+CGFloat const BHClassifyHeaderViewHeight = 40;
+CGFloat const BHClassifyItemSpacing = 20;
+
+NSInteger const colItemCount = 4;

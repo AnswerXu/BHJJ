@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BHBathroomViewController : UIViewController
+#import "BHHomeBaseViewController.h"
+@interface BHBathroomViewController : BHHomeBaseViewController
 
 @end

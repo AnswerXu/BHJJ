@@ -19,7 +19,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-&#34180;&#33655;&#23478;&#23621;.xcscheme</key>
+		<key>Pods-薄荷家居.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -36,6 +36,37 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>4AD9A658254760EA9B19C76762089883</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>60042A7FD06D257FC24AC5EC41537C45</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F74D9EA91F4C43190670066BAC37D44</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>928353533005A4198EBDA5B700D37B64</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E89EA0620E22EDB775A7C107518644DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD90738ACC036D45FDD71CB1217AB971</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>

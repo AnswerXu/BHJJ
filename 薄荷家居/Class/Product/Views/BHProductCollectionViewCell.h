@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class BHProductModel;
 @interface BHProductCollectionViewCell : UICollectionViewCell
-
+@property (nonatomic,copy) BHProductModel *productModel;
 @end

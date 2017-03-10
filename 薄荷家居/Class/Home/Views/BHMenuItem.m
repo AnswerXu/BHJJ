@@ -10,12 +10,11 @@
 
 @implementation BHMenuItem
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
++(instancetype)buttonWithType:(UIButtonType)buttonType{
+    BHMenuItem *item = [super buttonWithType:buttonType];
+    [item setTitleColor:BHFontColor_selected forState:UIControlStateSelected];
+    [item setTitleColor:BHFontColor_normal forState:UIControlStateNormal];
+    item.titleLabel.font = [UIFont systemFontOfSize:14];
+    return item;
 }
-*/
-
 @end

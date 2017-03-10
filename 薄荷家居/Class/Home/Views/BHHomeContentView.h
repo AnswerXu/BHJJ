@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class BHHomeContentView;
+@protocol HomeContentViewDelegate <NSObject>
+-(void)homeContentViewWillBeginDragging:(BHHomeContentView *)scrollView;
+@end
 @interface BHHomeContentView : UICollectionView
-
+@property (nonatomic,weak) id<HomeContentViewDelegate> scrollDelegate;
+@property (nonatomic,copy) NSArray<UIViewController *> *childs;
+-(void)scrollWithIndexPath:(NSIndexPath *)indexPath;
 @end

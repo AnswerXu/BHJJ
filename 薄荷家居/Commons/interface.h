@@ -52,12 +52,14 @@
 
 //单品
 //http://api.bohejiaju.com/v2/items?gender=1&generation=1&limit=20&offset=0
-#define kOdd @"http://api.bohejiaju.com/v2/items"
+#define KProduct @"http://api.bohejiaju.com/v2/items"
 
 //图文介绍
 #define kOddIntroduce @"http://api.bohejiaju.com/v2/items/%ld"  //参数id
 //评论
 #define kOddComment @"http://api.bohejiaju.com/v2/items/1146/comments?limit=20&offset=%ld"
+
+//http://api.bohejiaju.com/v1/posts/4545/comments?limit=20&offset=0
 
 
 /***********************************************************/
@@ -104,6 +106,18 @@
 //专题
 #define kSGDetail @"http://api.bohejiaju.com/v1/posts/%ld"
 #define kSTDetail @"http://api.bohejiaju.com/v2/items/%ld"
+
+
+//我
+//喜欢的商品
+//http://api.bohejiaju.com/v1/users/me/favorite_lists?limit=20&offset=0
+//喜欢的专题
+//http://api.bohejiaju.com/v1/users/me/post_likes?limit=20&offset=0
+#define kMyselfCollectTopic  @"http://api.bohejiaju.com/v1/users/me/post_likes?limit=20&offset=0"
+
+
+//性别、职业选择
+//http://api.bohejiaju.com/v2/channels/preset?gender=2&generation=1
 
 #define kGender @"gender"
 #define kGeneration @"generation"

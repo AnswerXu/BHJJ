@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class BHHomeDataModel;
 @interface BHBaseTableViewCell : UITableViewCell
-
+@property (nonatomic,copy) BHHomeDataModel *dataModel;
 @end
