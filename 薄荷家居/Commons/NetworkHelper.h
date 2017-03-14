@@ -29,4 +29,15 @@
  *  @param failure         失败执行的block，block的参数为错误信息
  */
 - (void)Post:(NSString *)url parameter:(NSDictionary *)parameter success:(void (^)(id))success failure:(void (^)(NSError *))failure;
+
+/**
+ get请求
+ 
+ @param url       服务器地址
+ @param parameter 参数
+ @param success   请求成功的回调
+ @param failure   请求失败的回调
+ @param isShow    是否展现SVProgressHUD视图
+ */
+- (void)Get:(NSString *)url parameter:(NSDictionary *)parameter success:(void (^)(id obj))success failure:(void (^)(NSError *error))failure isShowSVProgressHUD:(BOOL)isShow;
 @end

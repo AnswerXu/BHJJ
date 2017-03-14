@@ -43,9 +43,9 @@ static NSString * const productCellIdent = @"productCellIdent";
 
 -(void)setupCollectionView{
     self.dataSource = self;
-    self.contentInset = UIEdgeInsetsMake(edgeSpacing/2, edgeSpacing, edgeSpacing, edgeSpacing/2);
+    self.contentInset = UIEdgeInsetsMake(edgeSpacing/2, edgeSpacing, edgeSpacing/2, edgeSpacing);
     self.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    [self registerClass:[BHProductCollectionViewCell class] forCellWithReuseIdentifier:productCellIdent];
+    [self registerNib:[UINib nibWithNibName:NSStringFromClass([BHProductCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:productCellIdent];
 }
 
 -(void)setDatas:(NSArray<BHProductModel *> *)datas{

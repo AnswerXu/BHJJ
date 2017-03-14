@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 @class BHClassifyItemModel;
 @class BHClassifyTopicModel;
+@class BHClassifyFirstCellCollectionView;
+@class BHClassifySecondCellCollectionView;
+
+@protocol ClassifyDelegate <NSObject>
+-(void)firstCellCollectionView:(BHClassifyFirstCellCollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath topicModel:(BHClassifyTopicModel *)model;
+-(void)secondCellCollectionView:(BHClassifySecondCellCollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath itemModel:(BHClassifyItemModel *)model;
+-(void)firstCellLookAllWithTopicModels:(NSArray<BHClassifyTopicModel *> *)topicModels;
+@end
 @interface BHClassifyTableView : UITableView
+@property (nonatomic,weak) id<ClassifyDelegate> classifyDelegate;
 @end

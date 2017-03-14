@@ -10,7 +10,6 @@
 #import "BHClassifySecondCellCollectionView.h"
 
 @interface BHClassifySecondTableViewCell()
-@property (nonatomic,strong) BHClassifySecondCellCollectionView *collectionView;
 @end
 
 @implementation BHClassifySecondTableViewCell

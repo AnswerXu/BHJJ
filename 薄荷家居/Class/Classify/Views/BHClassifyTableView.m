@@ -12,7 +12,7 @@
 #import "BHClassifyItemModel.h"
 #import "BHClassifyTopicModel.h"
 
-@interface BHClassifyTableView()<UITableViewDataSource,UITableViewDelegate>
+@interface BHClassifyTableView()<UITableViewDataSource,UITableViewDelegate,UICollectionViewDelegate>
 @property (nonatomic,copy) NSMutableArray<NSArray *> *itemDatas;
 @property (nonatomic,copy) NSMutableArray<BHClassifyTopicModel *> *topicModels;
 @end
@@ -114,12 +114,33 @@ static NSString *const classifySecondCellIdent = @"classifySecondCellIdent";
         BHClassifyFirstTableViewCell *firstCell = [tableView dequeueReusableCellWithIdentifier:classifyFirstCellIdent];
         firstCell.textLabel.text = @"专题集合";
         firstCell.topicModels = _topicModels;
+        UICollectionView *collectionView = (UICollectionView *)firstCell.collectionView;
+        collectionView.delegate = self;
+        UIButton *lookAll = (UIButton *)firstCell.lookAllButton;
+        [lookAll addTarget:self action:@selector(lookAllTopic) forControlEvents:UIControlEventTouchUpInside];
+        
         return firstCell;
     }
     BHClassifySecondTableViewCell *secondCell = [tableView dequeueReusableCellWithIdentifier:classifySecondCellIdent];
     secondCell.textLabel.text = indexPath.section == 1 ? @"地点" : @"品类";
     secondCell.itemModels = self.itemDatas[indexPath.section - 1];
+    UICollectionView *collectionView = (UICollectionView *)secondCell.collectionView;
+    collectionView.delegate = self;
     return secondCell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    if ([_classifyDelegate respondsToSelector:@selector(firstCellCollectionView:didSelectItemAtIndexPath:topicModel:)] && collectionView.tag == 1000) {
+        [_classifyDelegate firstCellCollectionView:(BHClassifyFirstCellCollectionView *)collectionView didSelectItemAtIndexPath:indexPath topicModel:_topicModels[indexPath.item]];
+    }else if ([_classifyDelegate respondsToSelector:@selector(secondCellCollectionView:didSelectItemAtIndexPath:itemModel:)] && collectionView.tag == 1001) {
+        [_classifyDelegate secondCellCollectionView:(BHClassifySecondCellCollectionView *)collectionView didSelectItemAtIndexPath:indexPath itemModel:_itemDatas[indexPath.section][indexPath.item]];
+    }
+}
+
+-(void)lookAllTopic{
+    if ([_classifyDelegate respondsToSelector:@selector(firstCellLookAllWithTopicModels:)]) {
+        [_classifyDelegate firstCellLookAllWithTopicModels:_topicModels];
+    }
 }
 
 @end

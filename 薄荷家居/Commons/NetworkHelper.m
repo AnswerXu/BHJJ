@@ -49,4 +49,22 @@
         }
     }];
 }
+
+- (void)Get:(NSString *)url parameter:(NSDictionary *)parameter success:(void (^)(id obj))success failure:(void (^)(NSError *error))failure isShowSVProgressHUD:(BOOL)isShow{
+    if (isShow) [SVProgressHUD show];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"text/json",@"application/json",nil];
+    [manager GET:url parameters:parameter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (isShow) [SVProgressHUD dismiss];
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (isShow) [SVProgressHUD dismiss];
+        if (error && failure) {
+            failure(error);
+        }
+    }];
+}
+
 @end

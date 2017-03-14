@@ -8,6 +8,7 @@
 
 #import "BHHomeBaseViewController.h"
 #import "BHBaseTableViewCell.h"
+#import "BHRaidersDetailViewController.h"
 
 @interface BHHomeBaseViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -19,11 +20,12 @@ static NSString *const baseTableViewCellIdent = @"baseTableViewCellIdent";
 #pragma mark-  懒加载
 -(UITableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.size.height - 64) style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
         [_tableView registerClass:[BHBaseTableViewCell class] forCellReuseIdentifier:baseTableViewCellIdent];
+        _tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
     }
     return _tableView;
 }
@@ -62,13 +64,6 @@ static NSString *const baseTableViewCellIdent = @"baseTableViewCellIdent";
 }
 
 #pragma mark-  数据源代理方法
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 0.000001;
-}
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 0.000001;
-}
-
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 329 / 720.f * (BHScreenWidth - 20) + 10;
 }
@@ -81,7 +76,12 @@ static NSString *const baseTableViewCellIdent = @"baseTableViewCellIdent";
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"---%ld===%@",indexPath.row,self.dataSource[indexPath.row].title);
+    BHRaidersDetailViewController *detail = [[BHRaidersDetailViewController alloc] init];
+    detail.hidesBottomBarWhenPushed = YES;
+    detail.contentUrl = self.dataSource[indexPath.row].content_url;
+    detail.headerImageUrl = self.dataSource[indexPath.row].cover_image_url;
+    detail.titleLabelText = self.dataSource[indexPath.row].title;
+    [self.navigationController pushViewController:detail animated:YES];
 }
 
 @end

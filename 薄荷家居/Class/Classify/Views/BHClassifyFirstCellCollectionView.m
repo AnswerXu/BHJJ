@@ -58,6 +58,7 @@ static NSString *const classifyFirstCollectionViewCellIdent = @"classifyFirstCol
         self.contentInset = UIEdgeInsetsMake(0, 10, 0, 10);
         [self registerClass:[BHClassifyFirstCollectionViewCell class] forCellWithReuseIdentifier:classifyFirstCollectionViewCellIdent];
         self.showsHorizontalScrollIndicator = NO;
+        self.tag = 1000;
     }
     return self;
 }
@@ -70,5 +71,7 @@ static NSString *const classifyFirstCollectionViewCellIdent = @"classifyFirstCol
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:_topicModels[indexPath.item].banner_image_url] placeholderImage:[UIImage imageNamed:@"zhanwei"]];
     return cell;
 }
+
+
 
 @end

@@ -77,8 +77,9 @@
         [self.collectionView.mj_header endRefreshing];
         [self.collectionView.mj_footer endRefreshing];
     } failure:^(NSError *error) {
-        NSLog(@"%@",error);
-    }];
+        [self.collectionView.mj_header endRefreshing];
+        [self.collectionView.mj_footer endRefreshing];
+    } isShowSVProgressHUD:YES];
 }
 
 @end

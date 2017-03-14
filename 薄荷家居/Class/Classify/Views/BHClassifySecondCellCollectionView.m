@@ -66,6 +66,7 @@ static NSString *const classifyCollectionViewCellIdent = @"classifyCollectionVie
         self.backgroundColor = [UIColor whiteColor];
         [self registerClass:[BHClassifyCollectionViewCell class] forCellWithReuseIdentifier:classifyCollectionViewCellIdent];
         self.contentInset = UIEdgeInsetsMake(0, BHClassifyItemSpacing * 0.5, 0, BHClassifyItemSpacing * 0.5);
+        self.tag = 1001;
     }
     return self;
 }

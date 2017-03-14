@@ -12,6 +12,8 @@
 @property (nonatomic,assign) NSInteger ID;
 @property (nonatomic,copy) NSString *image_url;
 @property (nonatomic,assign) NSInteger target_id;
+@property (nonatomic,copy) NSString *target_title;
+@property (nonatomic,copy) NSDictionary *target;
 @end
 
 /*

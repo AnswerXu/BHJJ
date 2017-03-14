@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 @class BHClassifyTopicModel;
+@class BHClassifyFirstCellCollectionView;
+@class BHRightImageButton;
+
 @interface BHClassifyFirstTableViewCell : UITableViewCell
 @property (nonatomic,copy) NSArray<BHClassifyTopicModel *> *topicModels;
+@property (nonatomic,strong) BHClassifyFirstCellCollectionView *collectionView;
+@property (nonatomic,strong) BHRightImageButton *lookAllButton;
 @end

@@ -15,7 +15,12 @@
 }
 
 +(JSONKeyMapper *)keyMapper{
-    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"id" : @"ID"}];
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"id" : @"ID",@"target.title":@"target_title"}];
+}
+
+-(void)setTarget:(NSDictionary *)target{
+    _target = target;
+    self.target_title = target[@"title"];
 }
 
 @end

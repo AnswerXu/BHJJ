@@ -15,4 +15,5 @@
 @property (nonatomic,assign) BOOL isDown;
 @property (nonatomic,assign) NSInteger offset;
 -(void)requestDatas;
+-(void)refresh;
 @end

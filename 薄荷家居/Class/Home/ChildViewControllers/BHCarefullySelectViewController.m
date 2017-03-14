@@ -10,6 +10,8 @@
 #import "ZB_3D_CycleScrollView.h"
 #import "BHAdversitementModel.h"
 #import "BHHomeContentView.h"
+#import "BHRaidersDetailViewController.h"
+#import "BHTopicListViewController.h"
 
 @interface BHCarefullySelectViewController ()<ZB_3D_CycleScrollViewDelegate>
 @property (strong,nonatomic) ZB_3D_CycleScrollView *adView;
@@ -80,13 +82,19 @@
         [self.tableView reloadData];
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];
-    } failure:nil];
-}
+    } failure:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+    } isShowSVProgressHUD:YES];}
 
 
 #pragma mark-  ZB_3D_CycleScrollViewDelegate
 -(void)cycleScrollView:(ZB_3D_CycleScrollView *)cycleScrollView DidSelectItem:(NSInteger)indexPathItem{
-    NSLog(@"----%ld",indexPathItem);
+    BHTopicListViewController *topicList = [[BHTopicListViewController alloc] init];
+    topicList.hidesBottomBarWhenPushed = YES;
+    topicList.ID = self.adverDatas[indexPathItem].target_id;
+    topicList.title = self.adverDatas[indexPathItem].target_title;
+    [self.navigationController pushViewController:topicList animated:YES];
 }
 
 -(void)dealloc{

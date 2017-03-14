@@ -17,5 +17,6 @@
 #import "UIImageView+WebCache.h"
 #import "NetworkHelper.h"
 #import "interface.h"
+#import "SVProgressHUD.h"
 
 #endif /* BHPrefixHeader_pch */

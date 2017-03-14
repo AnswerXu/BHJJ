@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ZB_3D_CycleScrollView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4AD9A658254760EA9B19C76762089883</key>
+		<key>094386F34664C215C08EC7ED750B3CFD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>60042A7FD06D257FC24AC5EC41537C45</key>
+		<key>3272628D702260EA9FAAC30E31E93384</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>489149BE8EF479C4AB8BAB06190D5101</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E89EA0620E22EDB775A7C107518644DD</key>
+		<key>BD40A0518D76FDADA381F50981443CF2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FD90738ACC036D45FDD71CB1217AB971</key>
+		<key>E89EA0620E22EDB775A7C107518644DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

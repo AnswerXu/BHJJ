@@ -24,7 +24,7 @@ static CGFloat const edgeSpacing = 10;
         [_praiseButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _praiseButton.titleLabel.font = [UIFont systemFontOfSize:10];
         _praiseButton.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.400];
-        _praiseButton.layer.cornerRadius = 10;
+        _praiseButton.layer.cornerRadius = 12;
         [_praiseButton addTarget:self action:@selector(praiseButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _praiseButton;
@@ -53,7 +53,7 @@ static CGFloat const edgeSpacing = 10;
     
     CGSize praiseButtonSize = [self.praiseButton sizeThatFits:CGSizeMake(MAXFLOAT, 100)];
     CGFloat praiseWidth = praiseButtonSize.width + 10;
-    self.praiseButton.frame = CGRectMake(self.imageView.width - praiseWidth - 10, 10, praiseWidth, 20);
+    self.praiseButton.frame = CGRectMake(self.imageView.width - praiseWidth - 10, 10, praiseWidth, 24);
 }
 
 -(void)setDataModel:(BHHomeDataModel *)dataModel{

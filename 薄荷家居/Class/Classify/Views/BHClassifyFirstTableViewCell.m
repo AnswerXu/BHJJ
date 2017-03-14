@@ -11,8 +11,7 @@
 #import "BHClassifyFirstCellCollectionView.h"
 
 @interface BHClassifyFirstTableViewCell()
-@property (nonatomic,strong) BHClassifyFirstCellCollectionView *collectionView;
-@property (nonatomic,strong) BHRightImageButton *lookAllButton;
+
 @end
 
 @implementation BHClassifyFirstTableViewCell

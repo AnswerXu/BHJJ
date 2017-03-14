@@ -19,6 +19,7 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - SVProgressHUD (2.1.2)
   - ZB_3D_CycleScrollView (0.0.6):
     - SDWebImage
 
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - JSONModel (~> 1.6.0)
   - MJRefresh (~> 3.0.0)
   - SDWebImage (~> 3.8.0)
+  - SVProgressHUD
   - ZB_3D_CycleScrollView (~> 0.0.4)
 
 SPEC CHECKSUMS:
@@ -34,8 +36,9 @@ SPEC CHECKSUMS:
   JSONModel: f0ac82ba4d1812728f50feb58103d155d1226b95
   MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   ZB_3D_CycleScrollView: 433fc020c5527a6cfe2e489f9081127a2e77f5de
 
-PODFILE CHECKSUM: a26bd9495cddffe12e24d5580acbf79870d5a1e0
+PODFILE CHECKSUM: a7f879fcdee632d97800f17d8de7a1c2506e570b
 
 COCOAPODS: 1.0.1
