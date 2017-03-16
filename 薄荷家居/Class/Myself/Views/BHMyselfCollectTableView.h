@@ -15,6 +15,7 @@ typedef enum : NSUInteger {
 
 @class BHMyselfCollectTableView;
 @class BHMyselfHeaderView;
+@class BHTopicBaseModel;
 @protocol MyselfCollectTableViewDelegate <NSObject>
 -(void)collectTableView:(BHMyselfCollectTableView *)collectTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 @end
@@ -22,7 +23,7 @@ typedef enum : NSUInteger {
 @interface BHMyselfCollectTableView : UITableView
 @property (nonatomic,assign) MyselfCollectStyle selectedStyle;
 @property (nonatomic,copy) NSArray *goodsDatas;
-@property (nonatomic,copy) NSArray *topicDatas;
+@property (nonatomic,copy) NSArray<BHTopicBaseModel *> *topicDatas;
 @property (nonatomic,weak) id<MyselfCollectTableViewDelegate> collectdelegate;
 @property (nonatomic,strong) BHMyselfHeaderView *headerView;
 @end

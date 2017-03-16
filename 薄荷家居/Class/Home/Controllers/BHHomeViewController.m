@@ -10,6 +10,7 @@
 #import "BHHomeMenuView.h"
 #import "BHMenuItem.h"
 #import "BHHomeContentView.h"
+#import "BHSearchViewController.h"
 
 @interface BHHomeViewController ()<MenuViewDelegate,HomeContentViewDelegate>
 @property (nonatomic,strong) BHHomeMenuView *menuView;
@@ -44,6 +45,7 @@
     [self.view addSubview:self.contentView];
     self.contentView.childs = self.childViewControllers;
     _menuItemTitles = @[@"精选",@"卧室",@"书房",@"厨房",@"客厅",@"卫浴"];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_navigationItem_search_highlighted"] style:UIBarButtonItemStyleDone target:self action:@selector(searchItemAction)];
     [self.contentView addObserver:self forKeyPath:NSStringFromSelector(@selector(contentOffset)) options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
 }
 
@@ -56,6 +58,10 @@
         childVC.title = title;
         [self addChildViewController:childVC];
     }
+}
+
+-(void)searchItemAction{
+    [self.navigationController pushViewController:[[BHSearchViewController alloc] init] animated:YES];
 }
 
 #pragma mark-  MenuViewDelegate

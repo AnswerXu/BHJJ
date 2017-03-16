@@ -9,6 +9,7 @@
 #import "BHBaseTableViewCell.h"
 #import "BHHomeDataModel.h"
 #import "BHLeftImageButton.h"
+#import "BHDataBaseHelper.h"
 
 @interface BHBaseTableViewCell()
 @property (nonatomic,strong) BHLeftImageButton *praiseButton;
@@ -60,7 +61,7 @@ static CGFloat const edgeSpacing = 10;
     _dataModel = dataModel;
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:dataModel.cover_image_url] placeholderImage:[UIImage imageNamed:@"zhanwei"]];
     self.textLabel.text = dataModel.title;
-    self.praiseButton.selected = dataModel.liked;
+    self.praiseButton.selected = [[BHDataBaseHelper helper] isCollectedWithPrimaryKey:[NSString stringWithFormat:@"%ld",dataModel.ID]];
     [self.praiseButton setTitle:[NSString stringWithFormat:@"%lld",dataModel.likes_count] forState:UIControlStateNormal];
 }
 
@@ -68,6 +69,11 @@ static CGFloat const edgeSpacing = 10;
 -(void)praiseButtonAction:(BHLeftImageButton *)sender{
     sender.selected = !sender.selected;
     _dataModel.liked = sender.selected;
+    if (_dataModel.liked) {
+        [[BHDataBaseHelper helper] writeDatasWithCollectTopicModel:_dataModel];
+    }else{
+        [[BHDataBaseHelper helper] deleteDatasWithCollectTopicModel:_dataModel];
+    }
 }
 
 @end

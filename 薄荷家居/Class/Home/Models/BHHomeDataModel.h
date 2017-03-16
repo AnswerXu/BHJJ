@@ -7,21 +7,14 @@
 //
 
 #import <JSONModel/JSONModel.h>
-
-@interface BHHomeDataModel : JSONModel
-
-@property (nonatomic,strong) NSString *content_url;
-@property (nonatomic,strong) NSString *cover_image_url;
+#import "BHTopicBaseModel.h"
+@interface BHHomeDataModel : BHTopicBaseModel
 @property (nonatomic,assign) long long created_at;
-@property (nonatomic,assign) NSInteger ID;//映射为id；
 @property (nonatomic,assign) NSArray *labels;
-@property (nonatomic,assign) BOOL liked;
-@property (nonatomic,assign) long long likes_count;
 @property (nonatomic,assign) long long published_at;
 @property (nonatomic,strong) NSString *share_msg;
 @property (nonatomic,strong) NSString *short_title;
 @property (nonatomic,assign) NSInteger status;
-@property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) NSString *type;
 @property (nonatomic,assign)long long updated_at;
 @property (nonatomic,strong) NSString *url;

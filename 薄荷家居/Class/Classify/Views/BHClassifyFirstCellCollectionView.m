@@ -64,7 +64,7 @@ static NSString *const classifyFirstCollectionViewCellIdent = @"classifyFirstCol
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return _topicModels.count;
+    return 6;
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     BHClassifyFirstCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:classifyFirstCollectionViewCellIdent forIndexPath:indexPath];

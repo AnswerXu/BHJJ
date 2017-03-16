@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class WKWebView;
 @interface BHCommodityDetailViewController : UIViewController
 @property (nonatomic,copy) NSString *contentUrl;
+@property (nonatomic,strong) WKWebView *webView;
 @end

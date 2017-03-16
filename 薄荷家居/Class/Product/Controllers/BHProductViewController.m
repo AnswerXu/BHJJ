@@ -9,8 +9,9 @@
 #import "BHProductViewController.h"
 #import "BHProductCollectionView.h"
 #import "BHProductModel.h"
+#import "BHProductDeltailViewController.h"
 
-@interface BHProductViewController ()
+@interface BHProductViewController ()<UICollectionViewDelegate>
 @property (nonatomic,strong) BHProductCollectionView *collectionView;
 @property (nonatomic,copy) NSMutableArray<BHProductModel *> *datas;
 @property (nonatomic,assign) NSInteger offset;
@@ -24,6 +25,7 @@
 -(BHProductCollectionView *)collectionView{
     if (!_collectionView) {
         _collectionView = [[BHProductCollectionView alloc] init];
+        _collectionView.delegate = self;
     }
     return _collectionView;
 }
@@ -80,6 +82,13 @@
         [self.collectionView.mj_header endRefreshing];
         [self.collectionView.mj_footer endRefreshing];
     } isShowSVProgressHUD:YES];
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    BHProductDeltailViewController *commodityDetail = [[BHProductDeltailViewController alloc] init];
+    commodityDetail.hidesBottomBarWhenPushed = YES;
+    commodityDetail.contentUrl = [NSString stringWithFormat:kOddIntroduce,_datas[indexPath.item].ID];
+    [self.navigationController pushViewController:commodityDetail animated:YES];
 }
 
 @end

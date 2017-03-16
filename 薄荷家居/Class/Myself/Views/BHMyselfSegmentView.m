@@ -27,6 +27,7 @@
 -(UIView *)scrollLine{
     if (!_scrollLine) {
         _scrollLine = [[UIView alloc] init];
+        _scrollLine.backgroundColor = BHFontColor_selected;
     }
     return _scrollLine;
 }
@@ -63,6 +64,7 @@
     [self addSubview:self.backgroundView];
     [self addSubview:self.topLine];
     [self addSubview:self.bottomLine];
+    [self addSubview:self.scrollLine];
 }
 
 
@@ -85,6 +87,8 @@
         UIButton *item = [_dataSource segmentView:self ItemForColumnAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
         if(!item) continue;
         item.frame = CGRectMake(i*(itemWidth + 0.5), 0.5, itemWidth, self.backgroundView.height - 1);
+        [item setTag:i];
+        [item addTarget:self action:@selector(itemAction:) forControlEvents:UIControlEventTouchUpInside];
         [self.backgroundView addSubview:item];
         [self.segmentItems addObject:item];
         
@@ -92,6 +96,16 @@
         UIView *line = [[UIView alloc] initWithFrame:CGRectMake(self.segmentItems[i-1].maxX, 0, 0.5, self.backgroundView.height)];
         line.backgroundColor = BHLineColor_normal;
         [self.backgroundView addSubview:line];
+    }
+    self.scrollLine.frame = CGRectMake(0, self.height - 2, itemWidth, 2);
+}
+
+-(void)itemAction:(UIButton *)sender{
+    if ([_delegate respondsToSelector:@selector(segmentView:didSelectItemAtIndexPath:)]) {
+        [UIView animateWithDuration:0.2 animations:^{
+            self.scrollLine.x = sender.x;
+        }];
+        [_delegate segmentView:self didSelectItemAtIndexPath:[NSIndexPath indexPathForItem:sender.tag inSection:0]];
     }
 }
 

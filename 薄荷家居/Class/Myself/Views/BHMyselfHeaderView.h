@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @class BHMyselfSegmentView;
 @interface BHMyselfHeaderView : UIView
 @property (nonatomic,strong) BHMyselfSegmentView *segmentView;

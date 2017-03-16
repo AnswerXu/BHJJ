@@ -14,6 +14,13 @@
 -(UIButton *)segmentView:(BHMyselfSegmentView *)segmentView ItemForColumnAtIndexPath:(NSIndexPath *)indexPath;
 @end
 
+@protocol MyselfSegmentViewDelegate <NSObject>
+@optional
+-(void)segmentView:(BHMyselfSegmentView *)segmentView didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
+@end
+
+
 @interface BHMyselfSegmentView : UIView
 @property (nonatomic,weak) id<MyselfSegmentViewDataSource> dataSource;
+@property (nonatomic,weak) id<MyselfSegmentViewDelegate> delegate;
 @end

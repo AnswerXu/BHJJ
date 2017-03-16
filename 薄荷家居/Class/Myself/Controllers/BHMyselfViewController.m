@@ -10,10 +10,14 @@
 #import "BHMyselfCollectTableView.h"
 #import "BHMyselfHeaderView.h"
 #import "BHMyselfSettingViewController.h"
+#import "BHMyselfSegmentView.h"
+#import "BHDataBaseHelper.h"
+#import "BHTopicBaseModel.h"
 
-@interface BHMyselfViewController ()<MyselfCollectTableViewDelegate>
+@interface BHMyselfViewController ()<MyselfCollectTableViewDelegate,MyselfSegmentViewDelegate>
 @property (nonatomic,strong) BHMyselfCollectTableView *tableView;
 @property (nonatomic,strong) BHMyselfHeaderView *headerView;
+@property (nonatomic,copy) NSArray<BHTopicBaseModel *> *topicDatas;
 @end
 
 @implementation BHMyselfViewController
@@ -34,6 +38,7 @@
 -(BHMyselfHeaderView *)headerView{
     if (!_headerView) {
         _headerView = [[BHMyselfHeaderView alloc] init];
+        _headerView.segmentView.delegate = self;
     }
     return _headerView;
 }
@@ -43,6 +48,7 @@
     [self.view addSubview:self.headerView];
     [self.view addSubview:self.tableView];
     [self setupNavigationItems];
+    _topicDatas = [[BHDataBaseHelper helper] getAllDatasWithCollectTopicModels];
 }
 
 -(void)setupNavigationItems{
@@ -72,6 +78,13 @@
 #pragma mark-  MyselfCollectTableViewDelegate
 -(void)collectTableView:(BHMyselfCollectTableView *)collectTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self setItemAction];
+}
+
+#pragma mark-  MyselfSegmentViewDelegate
+-(void)segmentView:(BHMyselfSegmentView *)segmentView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    self.tableView.selectedStyle = indexPath.item;
+    self.tableView.topicDatas = _topicDatas;
+    [self.tableView reloadData];
 }
 
 #pragma mark-  事件监听

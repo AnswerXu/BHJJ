@@ -15,7 +15,8 @@
 
 #define BHFontColor_selected  [UIColor colorWithRed:0.000 green:0.757 blue:0.682 alpha:1.000]
 #define BHFontColor_normal    [UIColor colorWithWhite:0.400 alpha:1.000]
-#define BHLineColor_normal    [UIColor colorWithRed:0.831 green:0.830 blue:0.842 alpha:1.000]
+#define BHLineColor_normal    [UIColor colorWithRed:0.831 green:0.830 blue:0.832 alpha:1.000]
+#define BHFontColor_light    [UIColor colorWithRed:0.587 green:0.589 blue:0.587 alpha:1.000]
 
 UIKIT_EXTERN CGFloat const BHClassifyHeaderViewHeight;
 UIKIT_EXTERN CGFloat const BHClassifyItemSpacing;

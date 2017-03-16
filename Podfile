@@ -6,4 +6,5 @@ pod 'SDWebImage',   '~>3.8.0'
 pod 'MJRefresh',    '~>3.0.0'
 pod 'ZB_3D_CycleScrollView', '~> 0.0.4'
 pod 'SVProgressHUD'
+pod 'FMDB', '~> 2.6'
 end

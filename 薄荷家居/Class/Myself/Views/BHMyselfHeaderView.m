@@ -36,7 +36,6 @@ static CGFloat const segmentViewHeight = 40;
     return _segmentView;
 }
 
-
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:CGRectMake(0, -headerViewHeight, BHScreenWidth, headerViewHeight)]) {
         [self addSubview:self.backgroundView];
