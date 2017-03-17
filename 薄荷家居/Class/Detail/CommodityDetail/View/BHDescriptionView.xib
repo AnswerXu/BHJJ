@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BHDescriptionView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="121"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgv-8w-g8g">
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.75700000000000001" blue="0.68200000000000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKm-fU-6Nh">
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEB-Ar-ch7">
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="NKm-fU-6Nh" secondAttribute="trailing" constant="15" id="9Yd-pM-qGs"/>
+                <constraint firstItem="NKm-fU-6Nh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="E6d-UU-3XN"/>
+                <constraint firstItem="NKm-fU-6Nh" firstAttribute="top" secondItem="Rgv-8w-g8g" secondAttribute="bottom" constant="15" id="Efw-md-Bd2"/>
+                <constraint firstAttribute="trailing" secondItem="Rgv-8w-g8g" secondAttribute="trailing" constant="15" id="H53-bW-jTe"/>
+                <constraint firstItem="Rgv-8w-g8g" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="MtD-hx-FUO"/>
+                <constraint firstAttribute="trailing" secondItem="DEB-Ar-ch7" secondAttribute="trailing" constant="15" id="Yyl-oa-0Bf"/>
+                <constraint firstItem="DEB-Ar-ch7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="mZO-Ur-3i7"/>
+                <constraint firstItem="Rgv-8w-g8g" firstAttribute="top" secondItem="DEB-Ar-ch7" secondAttribute="bottom" constant="15" id="sjd-Ka-YoY"/>
+                <constraint firstItem="DEB-Ar-ch7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="tDG-RM-NsS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="NKm-fU-6Nh" id="YNr-wu-BHX"/>
+                <outlet property="priceLabel" destination="Rgv-8w-g8g" id="btT-ZF-yjn"/>
+                <outlet property="titleLabel" destination="DEB-Ar-ch7" id="f2L-Vg-AD4"/>
+            </connections>
+            <point key="canvasLocation" x="340.5" y="-158.5"/>
+        </view>
+    </objects>
+</document>

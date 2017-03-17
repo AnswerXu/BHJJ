@@ -6,8 +6,9 @@
 //  Copyright © 2017年 AnswerXu. All rights reserved.
 //
 
-#import "BHCommodityDetailViewController.h"
 
-@interface BHProductDeltailViewController : BHCommodityDetailViewController
+//#import <UIKit/UIKit.h>
 
+@interface BHProductDetailViewController : UIViewController
+@property (nonatomic,copy) NSString *contentUrl;
 @end

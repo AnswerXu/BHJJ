@@ -46,8 +46,6 @@
 		34676EC51E77CB2F00BE9709 /* BHDisplayKeywordTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34676EC41E77CB2F00BE9709 /* BHDisplayKeywordTableView.m */; };
 		34676EC81E77CC3000BE9709 /* BHKeywordCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34676EC71E77CC3000BE9709 /* BHKeywordCollectionView.m */; };
 		346CB2BC1E7634BB000BA5EB /* BHProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 346CB2BB1E7634BB000BA5EB /* BHProductCollectionViewCell.xib */; };
-		346CB2C61E764A96000BA5EB /* BHRaidersDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 346CB2C51E764A96000BA5EB /* BHRaidersDetailViewController.m */; };
-		346CB2CA1E764B15000BA5EB /* BHCommodityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 346CB2C91E764B15000BA5EB /* BHCommodityDetailViewController.m */; };
 		346CB2CD1E76793C000BA5EB /* BHTopicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 346CB2CC1E76793C000BA5EB /* BHTopicListViewController.m */; };
 		346CB2D01E769332000BA5EB /* BHAllTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 346CB2CF1E769332000BA5EB /* BHAllTopicViewController.m */; };
 		346CB2D41E76978D000BA5EB /* BHAllTopicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 346CB2D21E76978D000BA5EB /* BHAllTopicTableViewCell.m */; };
@@ -74,7 +72,15 @@
 		34A92F1D1E71629700BC81D3 /* BHMyselfSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A92F1C1E71629700BC81D3 /* BHMyselfSettingViewController.m */; };
 		34C98F781E7A69D2005E5BF0 /* BHDataBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C98F771E7A69D2005E5BF0 /* BHDataBaseHelper.m */; };
 		34C98F7B1E7A92B7005E5BF0 /* BHTopicBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C98F7A1E7A92B7005E5BF0 /* BHTopicBaseModel.m */; };
-		34C98F7E1E7AA2D0005E5BF0 /* BHProductDeltailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C98F7D1E7AA2D0005E5BF0 /* BHProductDeltailViewController.m */; };
+		34D9F4AA1E7B8217009CC1C5 /* BHCommodityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D9F4A91E7B8217009CC1C5 /* BHCommodityDetailViewController.m */; };
+		34D9F4AE1E7B8267009CC1C5 /* BHRaidersDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D9F4AD1E7B8267009CC1C5 /* BHRaidersDetailViewController.m */; };
+		34D9F4B11E7B840C009CC1C5 /* BHProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D9F4B01E7B840C009CC1C5 /* BHProductDetailViewController.m */; };
+		34D9F4B61E7B843C009CC1C5 /* BHCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D9F4B31E7B843C009CC1C5 /* BHCycleScrollView.m */; };
+		34D9F4B71E7B843C009CC1C5 /* BHProductDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D9F4B51E7B843C009CC1C5 /* BHProductDetailHeaderView.m */; };
+		34D9F4BA1E7BAEEC009CC1C5 /* BHProductDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D9F4B91E7BAEEC009CC1C5 /* BHProductDetailModel.m */; };
+		34D9F4BD1E7BC0BE009CC1C5 /* BHDescriptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D9F4BC1E7BC0BE009CC1C5 /* BHDescriptionView.m */; };
+		34D9F4BF1E7BC0D4009CC1C5 /* BHDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34D9F4BE1E7BC0D4009CC1C5 /* BHDescriptionView.xib */; };
+		34D9F4C21E7BD1D8009CC1C5 /* BHProductDetailToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D9F4C11E7BD1D8009CC1C5 /* BHProductDetailToolbar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,10 +173,6 @@
 		34676EC61E77CC3000BE9709 /* BHKeywordCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHKeywordCollectionView.h; sourceTree = "<group>"; };
 		34676EC71E77CC3000BE9709 /* BHKeywordCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHKeywordCollectionView.m; sourceTree = "<group>"; };
 		346CB2BB1E7634BB000BA5EB /* BHProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BHProductCollectionViewCell.xib; sourceTree = "<group>"; };
-		346CB2C41E764A96000BA5EB /* BHRaidersDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHRaidersDetailViewController.h; sourceTree = "<group>"; };
-		346CB2C51E764A96000BA5EB /* BHRaidersDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHRaidersDetailViewController.m; sourceTree = "<group>"; };
-		346CB2C81E764B15000BA5EB /* BHCommodityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHCommodityDetailViewController.h; sourceTree = "<group>"; };
-		346CB2C91E764B15000BA5EB /* BHCommodityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHCommodityDetailViewController.m; sourceTree = "<group>"; };
 		346CB2CB1E76793C000BA5EB /* BHTopicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTopicListViewController.h; sourceTree = "<group>"; };
 		346CB2CC1E76793C000BA5EB /* BHTopicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTopicListViewController.m; sourceTree = "<group>"; };
 		346CB2CE1E769332000BA5EB /* BHAllTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHAllTopicViewController.h; sourceTree = "<group>"; };
@@ -221,8 +223,23 @@
 		34C98F771E7A69D2005E5BF0 /* BHDataBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDataBaseHelper.m; sourceTree = "<group>"; };
 		34C98F791E7A92B7005E5BF0 /* BHTopicBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHTopicBaseModel.h; sourceTree = "<group>"; };
 		34C98F7A1E7A92B7005E5BF0 /* BHTopicBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHTopicBaseModel.m; sourceTree = "<group>"; };
-		34C98F7C1E7AA2D0005E5BF0 /* BHProductDeltailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHProductDeltailViewController.h; sourceTree = "<group>"; };
-		34C98F7D1E7AA2D0005E5BF0 /* BHProductDeltailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHProductDeltailViewController.m; sourceTree = "<group>"; };
+		34D9F4A81E7B8217009CC1C5 /* BHCommodityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHCommodityDetailViewController.h; sourceTree = "<group>"; };
+		34D9F4A91E7B8217009CC1C5 /* BHCommodityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHCommodityDetailViewController.m; sourceTree = "<group>"; };
+		34D9F4AC1E7B8267009CC1C5 /* BHRaidersDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHRaidersDetailViewController.h; sourceTree = "<group>"; };
+		34D9F4AD1E7B8267009CC1C5 /* BHRaidersDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHRaidersDetailViewController.m; sourceTree = "<group>"; };
+		34D9F4AF1E7B840C009CC1C5 /* BHProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHProductDetailViewController.h; sourceTree = "<group>"; };
+		34D9F4B01E7B840C009CC1C5 /* BHProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHProductDetailViewController.m; sourceTree = "<group>"; };
+		34D9F4B21E7B843C009CC1C5 /* BHCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHCycleScrollView.h; sourceTree = "<group>"; };
+		34D9F4B31E7B843C009CC1C5 /* BHCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHCycleScrollView.m; sourceTree = "<group>"; };
+		34D9F4B41E7B843C009CC1C5 /* BHProductDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHProductDetailHeaderView.h; sourceTree = "<group>"; };
+		34D9F4B51E7B843C009CC1C5 /* BHProductDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHProductDetailHeaderView.m; sourceTree = "<group>"; };
+		34D9F4B81E7BAEEC009CC1C5 /* BHProductDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHProductDetailModel.h; sourceTree = "<group>"; };
+		34D9F4B91E7BAEEC009CC1C5 /* BHProductDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHProductDetailModel.m; sourceTree = "<group>"; };
+		34D9F4BB1E7BC0BE009CC1C5 /* BHDescriptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHDescriptionView.h; sourceTree = "<group>"; };
+		34D9F4BC1E7BC0BE009CC1C5 /* BHDescriptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHDescriptionView.m; sourceTree = "<group>"; };
+		34D9F4BE1E7BC0D4009CC1C5 /* BHDescriptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BHDescriptionView.xib; sourceTree = "<group>"; };
+		34D9F4C01E7BD1D8009CC1C5 /* BHProductDetailToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHProductDetailToolbar.h; sourceTree = "<group>"; };
+		34D9F4C11E7BD1D8009CC1C5 /* BHProductDetailToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHProductDetailToolbar.m; sourceTree = "<group>"; };
 		42DAEA5732FF386D8355C05B /* libPods-薄荷家居.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-薄荷家居.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFD54B2B41CCBCF22FFB1E1 /* Pods-薄荷家居.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-薄荷家居.release.xcconfig"; path = "Pods/Target Support Files/Pods-薄荷家居/Pods-薄荷家居.release.xcconfig"; sourceTree = "<group>"; };
 		8BA71A179A5A5A52AE06EA94 /* Pods-薄荷家居.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-薄荷家居.debug.xcconfig"; path = "Pods/Target Support Files/Pods-薄荷家居/Pods-薄荷家居.debug.xcconfig"; sourceTree = "<group>"; };
@@ -488,8 +505,6 @@
 			children = (
 				345EB9241E6D646F009A8984 /* BHProductViewController.h */,
 				345EB9251E6D646F009A8984 /* BHProductViewController.m */,
-				34C98F7C1E7AA2D0005E5BF0 /* BHProductDeltailViewController.h */,
-				34C98F7D1E7AA2D0005E5BF0 /* BHProductDeltailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -631,8 +646,7 @@
 		346CB2C31E764A8D000BA5EB /* RaidersDetail(攻略详情) */ = {
 			isa = PBXGroup;
 			children = (
-				346CB2C41E764A96000BA5EB /* BHRaidersDetailViewController.h */,
-				346CB2C51E764A96000BA5EB /* BHRaidersDetailViewController.m */,
+				34D9F4AB1E7B8260009CC1C5 /* Controller */,
 			);
 			name = "RaidersDetail(攻略详情)";
 			path = RaidersDetail;
@@ -641,8 +655,9 @@
 		346CB2C71E764AC3000BA5EB /* CommodityDetail(商品详情) */ = {
 			isa = PBXGroup;
 			children = (
-				346CB2C81E764B15000BA5EB /* BHCommodityDetailViewController.h */,
-				346CB2C91E764B15000BA5EB /* BHCommodityDetailViewController.m */,
+				34D9F4A51E7B820D009CC1C5 /* Model */,
+				34D9F4A61E7B820D009CC1C5 /* View */,
+				34D9F4A71E7B820D009CC1C5 /* Controller */,
 			);
 			name = "CommodityDetail(商品详情)";
 			path = CommodityDetail;
@@ -739,6 +754,51 @@
 				3489506E1E72A68E00CD5F67 /* BHSettingTableView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		34D9F4A51E7B820D009CC1C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				34D9F4B81E7BAEEC009CC1C5 /* BHProductDetailModel.h */,
+				34D9F4B91E7BAEEC009CC1C5 /* BHProductDetailModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		34D9F4A61E7B820D009CC1C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34D9F4BB1E7BC0BE009CC1C5 /* BHDescriptionView.h */,
+				34D9F4BC1E7BC0BE009CC1C5 /* BHDescriptionView.m */,
+				34D9F4BE1E7BC0D4009CC1C5 /* BHDescriptionView.xib */,
+				34D9F4B21E7B843C009CC1C5 /* BHCycleScrollView.h */,
+				34D9F4B31E7B843C009CC1C5 /* BHCycleScrollView.m */,
+				34D9F4B41E7B843C009CC1C5 /* BHProductDetailHeaderView.h */,
+				34D9F4B51E7B843C009CC1C5 /* BHProductDetailHeaderView.m */,
+				34D9F4C01E7BD1D8009CC1C5 /* BHProductDetailToolbar.h */,
+				34D9F4C11E7BD1D8009CC1C5 /* BHProductDetailToolbar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34D9F4A71E7B820D009CC1C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				34D9F4A81E7B8217009CC1C5 /* BHCommodityDetailViewController.h */,
+				34D9F4A91E7B8217009CC1C5 /* BHCommodityDetailViewController.m */,
+				34D9F4AF1E7B840C009CC1C5 /* BHProductDetailViewController.h */,
+				34D9F4B01E7B840C009CC1C5 /* BHProductDetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		34D9F4AB1E7B8260009CC1C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				34D9F4AC1E7B8267009CC1C5 /* BHRaidersDetailViewController.h */,
+				34D9F4AD1E7B8267009CC1C5 /* BHRaidersDetailViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		4DC7BE8A2CBCC6F18DD462E2 /* Frameworks */ = {
@@ -880,6 +940,7 @@
 				345EB8E31E6D6228009A8984 /* Assets.xcassets in Resources */,
 				346CB2D51E76978D000BA5EB /* BHAllTopicTableViewCell.xib in Resources */,
 				345EB8E11E6D6228009A8984 /* Main.storyboard in Resources */,
+				34D9F4BF1E7BC0D4009CC1C5 /* BHDescriptionView.xib in Resources */,
 				345EB9441E6D6A08009A8984 /* BHChildViewController.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -959,7 +1020,9 @@
 				34676EBC1E77C0D600BE9709 /* BHSearchViewController.m in Sources */,
 				34C98F7B1E7A92B7005E5BF0 /* BHTopicBaseModel.m in Sources */,
 				346CB2D41E76978D000BA5EB /* BHAllTopicTableViewCell.m in Sources */,
+				34D9F4B61E7B843C009CC1C5 /* BHCycleScrollView.m in Sources */,
 				348CAC791E6FCBEA00F02CEE /* BHHomeContentView.m in Sources */,
+				34D9F4AA1E7B8217009CC1C5 /* BHCommodityDetailViewController.m in Sources */,
 				348CAC7C1E6FD86000F02CEE /* BHHomeDataModel.m in Sources */,
 				348CAC6F1E6FB7B500F02CEE /* BHCarefullySelectViewController.m in Sources */,
 				348CAC6D1E6FB7B500F02CEE /* BHBathroomViewController.m in Sources */,
@@ -967,25 +1030,27 @@
 				345E33EB1E6E78FE00662758 /* NetworkHelper.m in Sources */,
 				346CB2D01E769332000BA5EB /* BHAllTopicViewController.m in Sources */,
 				345E33FA1E6EAB7A00662758 /* BHRightImageButton.m in Sources */,
+				34D9F4AE1E7B8267009CC1C5 /* BHRaidersDetailViewController.m in Sources */,
+				34D9F4B11E7B840C009CC1C5 /* BHProductDetailViewController.m in Sources */,
 				345EB9471E6D72F8009A8984 /* BHNavigationViewController.m in Sources */,
 				34A92F1D1E71629700BC81D3 /* BHMyselfSettingViewController.m in Sources */,
 				345EB91D1E6D6423009A8984 /* BHClassifyViewController.m in Sources */,
 				345E33E01E6E618A00662758 /* BHLeftImageButton.m in Sources */,
-				34C98F7E1E7AA2D0005E5BF0 /* BHProductDeltailViewController.m in Sources */,
 				345EB9261E6D646F009A8984 /* BHProductViewController.m in Sources */,
 				346CB2CD1E76793C000BA5EB /* BHTopicListViewController.m in Sources */,
+				34D9F4BA1E7BAEEC009CC1C5 /* BHProductDetailModel.m in Sources */,
 				345E33D01E6E51C900662758 /* BHProductCollectionView.m in Sources */,
 				34676EC51E77CB2F00BE9709 /* BHDisplayKeywordTableView.m in Sources */,
 				345E34001E6EB86B00662758 /* BHClassifyTopicModel.m in Sources */,
+				34D9F4C21E7BD1D8009CC1C5 /* BHProductDetailToolbar.m in Sources */,
+				34D9F4B71E7B843C009CC1C5 /* BHProductDetailHeaderView.m in Sources */,
 				345EB8D81E6D6228009A8984 /* main.m in Sources */,
 				345E33DD1E6E5C2000662758 /* UIView+Frame.m in Sources */,
 				345E33F11E6E984B00662758 /* BHClassifyFirstTableViewCell.m in Sources */,
 				345EB9231E6D645E009A8984 /* BHMyselfViewController.m in Sources */,
 				34676EC81E77CC3000BE9709 /* BHKeywordCollectionView.m in Sources */,
 				345EB92A1E6D64E4009A8984 /* BHConst.m in Sources */,
-				346CB2C61E764A96000BA5EB /* BHRaidersDetailViewController.m in Sources */,
 				345EB9201E6D643B009A8984 /* BHHomeViewController.m in Sources */,
-				346CB2CA1E764B15000BA5EB /* BHCommodityDetailViewController.m in Sources */,
 				34676EBF1E77C12C00BE9709 /* BHSearchTextField.m in Sources */,
 				348CAC5E1E6F9CD200F02CEE /* BHMenuItem.m in Sources */,
 				345E33F41E6E986100662758 /* BHClassifySecondTableViewCell.m in Sources */,
@@ -1004,6 +1069,7 @@
 				345E33EE1E6E966D00662758 /* BHClassifyTableView.m in Sources */,
 				34A92F131E7139C200BC81D3 /* BHMyselfHeaderView.m in Sources */,
 				348CAC711E6FB7B500F02CEE /* BHKitchenViewController.m in Sources */,
+				34D9F4BD1E7BC0BE009CC1C5 /* BHDescriptionView.m in Sources */,
 				348CAC861E6FDB8000F02CEE /* BHBaseTableViewCell.m in Sources */,
 				345E33FD1E6EAC9900662758 /* BHClassifySecondCellCollectionView.m in Sources */,
 				348950721E72A83C00CD5F67 /* BHSettingModel.m in Sources */,

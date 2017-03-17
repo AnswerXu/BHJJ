@@ -9,7 +9,7 @@
 #import "BHProductViewController.h"
 #import "BHProductCollectionView.h"
 #import "BHProductModel.h"
-#import "BHProductDeltailViewController.h"
+#import "BHProductDetailViewController.h"
 
 @interface BHProductViewController ()<UICollectionViewDelegate>
 @property (nonatomic,strong) BHProductCollectionView *collectionView;
@@ -85,9 +85,10 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    BHProductDeltailViewController *commodityDetail = [[BHProductDeltailViewController alloc] init];
+    BHProductDetailViewController *commodityDetail = [[BHProductDetailViewController alloc] init];
     commodityDetail.hidesBottomBarWhenPushed = YES;
     commodityDetail.contentUrl = [NSString stringWithFormat:kOddIntroduce,_datas[indexPath.item].ID];
+    NSLog(@"=====%ld=====",_datas[indexPath.item].ID);
     [self.navigationController pushViewController:commodityDetail animated:YES];
 }
 
